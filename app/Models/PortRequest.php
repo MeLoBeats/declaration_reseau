@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\PortRequestStatus;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
@@ -18,6 +19,10 @@ class PortRequest extends Model
         'status',
         'requester',
         'approver',
+    ];
+
+    protected $casts = [
+        'status' => PortRequestStatus::class,
     ];
 
     public function ports()

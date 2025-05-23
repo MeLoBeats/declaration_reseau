@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\PortRequestStatus;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,7 +23,7 @@ class PortRequestFactory extends Factory
             'exposed' => $this->faker->boolean(),
             'vlan' => $this->faker->optional()->numerify('VLAN-###'),
             'description' => $this->faker->optional()->sentence(),
-            'status' => 'pending',
+            'status' => PortRequestStatus::Pending,
             'requester' => $this->faker->userName(),
             'approver' => $this->faker->optional()->userName(),
         ];
