@@ -11,6 +11,7 @@ class PortRequest extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'fqdn',
         'ip_address',
         'exposed',
