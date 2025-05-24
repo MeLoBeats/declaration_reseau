@@ -20,6 +20,7 @@ class PortRequestResource extends JsonResource
             'fqdn' => $this->fqdn,
             'ip_address' => $this->ip_address,
             'exposed' => $this->exposed,
+            'exposed_label' => $this->exposed ? 'Exposée' : 'Non exposée',
             'vlan' => $this->vlan,
             'description' => $this->description,
             'status' => $this->status,

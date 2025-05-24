@@ -53,7 +53,7 @@ const Navbar = () => {
                         <Link href="/">
                             <img src={Logo} alt="Logo" className={"h-24"} />
                         </Link>
-                        <p>Déclaration Réseau / Web</p>
+                        <p>Déclaration Réseau</p>
                     </div>
                     <ul className={"hidden sm:flex flex-row items-center justify-center"}>
                         {navItems.map((item, index) => <NavItem link={item.link} label={item.label}

@@ -1,4 +1,4 @@
-import { RequestStatusEnum } from "./enums"
+import { RequestStatus } from "./enums"
 
 export type UsePageProps<T> = {
     auth: {
@@ -38,15 +38,14 @@ export type CollectionDataWithPagination<TData> = {
     data: CollectionData<TData>,
 } & PaginationData
 
-export type UserRequest = {
-    fqdn: string,
-    demandeur: string,
-    type: TypeRequest
-    description?: string,
-    exposition: "Publique" | "Privée",
-    vlan?: number,
-    status: RequestStatusEnum
-    date: Date
-}
+interface UserRequest {
+    created_at: string;
+    requester: string;
+    ip_address: string;
+    fqdn: string;
+    exposed: boolean;
+    status: RequestStatus;
+    ports: { port: number; protocol: string }[];
+  }
 
 export type TypeRequest = "Hébergement Web" | "Port" | "Machine virtuelle" 

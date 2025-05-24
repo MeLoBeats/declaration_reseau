@@ -6,8 +6,8 @@ export enum RequestStatus {
 }
 
 export enum RequestExpositionEnum {
-    PUBLIC = "Publique",
-    PRIVATE = "Privée",
+    EXPOSED = "Publique",
+    NOT_EXPOSED = "Privée"
 }
 
 export const RequestStatusLabels: Record<RequestStatus, string> = {

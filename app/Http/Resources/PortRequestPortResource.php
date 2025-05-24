@@ -16,7 +16,7 @@ class PortRequestPortResource extends JsonResource
     {
         return [
             'port' => $this->port,
-            'protocol' => $this->protocol,
+            'protocol' => strtolower($this->protocol),
         ];
     }
 }

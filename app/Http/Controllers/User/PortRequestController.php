@@ -22,9 +22,8 @@ class PortRequestController extends Controller
             ->paginate(10);
 
         $collection = PortRequestResource::collection($requests);
-        dd($collection);
         return Inertia::render('User/Requests/Index', [
-            'requests' => PortRequestResource::collection($requests),
+            'requests' => $collection,
         ]);
     }
 
